@@ -47,21 +47,33 @@ func (r *PlayerStatsReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error)
 	fmt.Println("Inside the controller")
 
 	// print players with > 200 stat
-	player := &fantasyv1.PlayerStats{}
-	err := r.Get(context.TODO(), req.NamespacedName, player)
+	playerGet := &fantasyv1.PlayerStats{}
+	err := r.Get(context.TODO(), req.NamespacedName, playerGet)
 	// fmt.Println(player.Status.IctIndex)
 
 	if err != nil {
 		fmt.Print(err)
 	}
 
-	if player.Spec.IctIndex == "200" {
-		team = append(team, player.Spec)
+	if playerGet.Spec.IctIndex == "200" {
+		team = append(team, playerGet.Spec)
 	}
 
 	// print team
 	for _, t := range team {
 		fmt.Println(t)
+	}
+
+	// List Players
+	playerList := &fantasyv1.PlayerStatsList{}
+	listErr := r.List(context.TODO(), playerList)
+
+	if listErr != nil {
+		fmt.Println(listErr)
+	}
+
+	for _, x := range playerList.Items {
+		fmt.Println(x.Spec.FirstName)
 	}
 
 	return ctrl.Result{}, nil
