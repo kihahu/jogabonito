@@ -32,45 +32,45 @@ type PlayerStatsSpec struct {
 	// LastName of player 94
 	LastName string `json:"lastname,omitempty"`
 	// 124
-	IctIndex float64 `json:"ictindex,omitempty"`
+	IctIndex string `json:"ictindex,omitempty"`
 	// 119
-	Bonus int `json:"bonus,omitempty"`
+	Bonus string `json:"bonus,omitempty"`
 	// 86
-	Form float64 `json:"form,omitempty"`
+	Form string `json:"form,omitempty"`
 	// 105
-	ValueForm float64 `json:"valueform,omitempty"`
+	ValueForm string `json:"valueform,omitempty"`
 	// 101
-	TransferIn int `json:"transferin,omitempty"`
+	TransferIn string `json:"transferin,omitempty"`
 	// 103
-	TransferOut int `json:"transferout,omitempty"`
+	TransferOut string `json:"transferout,omitempty"`
 	// 91
-	Cost float64 `json:"cost,omitempty"`
+	Cost string `json:"cost,omitempty"`
 	// status 97
 	Status string `json:"status,omitempty"`
 	// assits 110
-	Assists int `json:"assists,omitempty"`
+	Assists string `json:"assists,omitempty"`
 	// goalsScored 110
-	GoalsScored int `json:"goalsscored,omitempty"`
+	GoalsScored string `json:"goalsscored,omitempty"`
 	// bpsIndex 120
-	BpsIndex float64 `json:"bpsindex,omitempty"`
+	BpsIndex string `json:"bpsindex,omitempty"`
 	// cleanSheets
-	CleanSheets int `json:"cleansheets,omitempty"`
+	CleanSheets string `json:"cleansheets,omitempty"`
 	// penaltiesMissed 114
-	PenaltiesMissed int `json:"penaltiesmissed,omitempty"`
+	PenaltiesMissed string `json:"penaltiesmissed,omitempty"`
 	// points 100
-	Points int `json:"points,omitempty"`
+	Points string `json:"points,omitempty"`
 	// position 61
 	Position string `json:"position,omitempty"`
 	// inDreamTeam 88
 	InDreamTeam string `json:"indreamteam,omitempty"`
 	// pointsPerGame 93
-	PointsPerGame float64 `json:"pointspergame,omitempty"`
+	PointsPerGame string `json:"pointspergame,omitempty"`
 	// selectByPercent 95
-	SelectedByPercent float64 `json:"selectedbypercent,omitempty"`
+	SelectedByPercent string `json:"selectedbypercent,omitempty"`
 	// penaltiesSaved 114
-	PenaltiesSaved float64 `json:"penaltiessaved,omitempty"`
+	PenaltiesSaved string `json:"penaltiessaved,omitempty"`
 	// saves 114
-	Saves float64 `json:"saves,omitempty"`
+	Saves string `json:"saves,omitempty"`
 }
 
 // PlayerStatsStatus defines the observed state of PlayerStats
@@ -85,43 +85,43 @@ type PlayerStatsStatus struct {
 	// 124
 	IctIndex string `json:"ictindex,omitempty"`
 	// 119
-	Bonus int `json:"bonus,omitempty"`
+	Bonus string `json:"bonus,omitempty"`
 	// 86
-	Form float64 `json:"form,omitempty"`
+	Form string `json:"form,omitempty"`
 	// 105
-	ValueForm float64 `json:"valueform,omitempty"`
+	ValueForm string `json:"valueform,omitempty"`
 	// 101
-	TransferIn int `json:"transferin,omitempty"`
+	TransferIn string `json:"transferin,omitempty"`
 	// 103
-	TransferOut int `json:"transferout,omitempty"`
+	TransferOut string `json:"transferout,omitempty"`
 	// 91
-	Cost float64 `json:"cost,omitempty"`
+	Cost string `json:"cost,omitempty"`
 	// status 97
 	Status string `json:"status,omitempty"`
 	// assits 110
-	Assists int `json:"assists,omitempty"`
+	Assists string `json:"assists,omitempty"`
 	// goalsScored 110
-	GoalsScored int `json:"goalsscored,omitempty"`
+	GoalsScored string `json:"goalsscored,omitempty"`
 	// bpsIndex 120
-	BpsIndex float64 `json:"bpsindex,omitempty"`
+	BpsIndex string `json:"bpsindex,omitempty"`
 	// cleanSheets
-	CleanSheets int `json:"cleansheets,omitempty"`
+	CleanSheets string `json:"cleansheets,omitempty"`
 	// penaltiesMissed 114
-	PenaltiesMissed int `json:"penaltiesmissed,omitempty"`
+	PenaltiesMissed string `json:"penaltiesmissed,omitempty"`
 	// points 100
-	Points int `json:"points,omitempty"`
+	Points string `json:"points,omitempty"`
 	// position 61
 	Position string `json:"position,omitempty"`
 	// inDreamTeam 88
 	InDreamTeam string `json:"indreamteam,omitempty"`
 	// pointsPerGame 93
-	PointsPerGame float64 `json:"pointspergame,omitempty"`
+	PointsPerGame string `json:"pointspergame,omitempty"`
 	// selectByPercent 95
-	SelectedByPercent float64 `json:"selectedbypercent,omitempty"`
+	SelectedByPercent string `json:"selectedbypercent,omitempty"`
 	// penaltiesSaved 114
-	PenaltiesSaved float64 `json:"penaltiessaved,omitempty"`
+	PenaltiesSaved string `json:"penaltiessaved,omitempty"`
 	// saves 114
-	Saves float64 `json:"saves,omitempty"`
+	Saves string `json:"saves,omitempty"`
 }
 
 // +kubebuilder:object:root=true
@@ -143,6 +143,11 @@ type PlayerStatsList struct {
 	metav1.ListMeta `json:"metadata,omitempty"`
 	Items           []PlayerStats `json:"items"`
 }
+
+// // Team Struct to create a recommended team
+// type Team struct {
+// 	Players []PlayerStatsSpec
+// }
 
 func init() {
 	SchemeBuilder.Register(&PlayerStats{}, &PlayerStatsList{})

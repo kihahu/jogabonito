@@ -1,0 +1,185 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.2.4
+  creationTimestamp: null
+  name: playerstats.fantasy.jogabonito.io
+spec:
+  group: fantasy.jogabonito.io
+  names:
+    kind: PlayerStats
+    listKind: PlayerStatsList
+    plural: playerstats
+    singular: playerstats
+  scope: Namespaced
+  validation:
+    openAPIV3Schema:
+      description: PlayerStats is the Schema for the playerstats API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: PlayerStatsSpec defines the desired state of PlayerStats
+          properties:
+            assists:
+              description: assits 110
+              type: string
+            bonus:
+              description: "119"
+              type: string
+            bpsindex:
+              description: bpsIndex 120
+              type: string
+            cleansheets:
+              description: cleanSheets
+              type: string
+            cost:
+              description: "91"
+              type: string
+            firstname:
+              description: FirstName of player 85
+              type: string
+            form:
+              description: "86"
+              type: string
+            goalsscored:
+              description: goalsScored 110
+              type: string
+            ictindex:
+              description: "124"
+              type: string
+            indreamteam:
+              description: inDreamTeam 88
+              type: string
+            lastname:
+              description: LastName of player 94
+              type: string
+            penaltiesmissed:
+              description: penaltiesMissed 114
+              type: string
+            penaltiessaved:
+              description: penaltiesSaved 114
+              type: string
+            points:
+              description: points 100
+              type: string
+            pointspergame:
+              description: pointsPerGame 93
+              type: string
+            position:
+              description: position 61
+              type: string
+            saves:
+              description: saves 114
+              type: string
+            selectedbypercent:
+              description: selectByPercent 95
+              type: string
+            status:
+              description: status 97
+              type: string
+            transferin:
+              description: "101"
+              type: string
+            transferout:
+              description: "103"
+              type: string
+            valueform:
+              description: "105"
+              type: string
+          type: object
+        status:
+          description: PlayerStatsStatus defines the observed state of PlayerStats
+          properties:
+            assists:
+              description: assits 110
+              type: string
+            bonus:
+              description: "119"
+              type: string
+            bpsindex:
+              description: bpsIndex 120
+              type: string
+            cleansheets:
+              description: cleanSheets
+              type: string
+            cost:
+              description: "91"
+              type: string
+            firstname:
+              description: FirstName of player 85
+              type: string
+            form:
+              description: "86"
+              type: string
+            goalsscored:
+              description: goalsScored 110
+              type: string
+            ictindex:
+              description: "124"
+              type: string
+            indreamteam:
+              description: inDreamTeam 88
+              type: string
+            lastname:
+              description: LastName of player 94
+              type: string
+            penaltiesmissed:
+              description: penaltiesMissed 114
+              type: string
+            penaltiessaved:
+              description: penaltiesSaved 114
+              type: string
+            points:
+              description: points 100
+              type: string
+            pointspergame:
+              description: pointsPerGame 93
+              type: string
+            position:
+              description: position 61
+              type: string
+            saves:
+              description: saves 114
+              type: string
+            selectedbypercent:
+              description: selectByPercent 95
+              type: string
+            status:
+              description: status 97
+              type: string
+            transferin:
+              description: "101"
+              type: string
+            transferout:
+              description: "103"
+              type: string
+            valueform:
+              description: "105"
+              type: string
+          type: object
+      type: object
+  version: v1
+  versions:
+  - name: v1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

@@ -41,19 +41,27 @@ func (r *PlayerStatsReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error)
 	_ = context.Background()
 	_ = r.Log.WithValues("playerstats", req.NamespacedName)
 
+	team := []fantasyv1.PlayerStatsSpec{}
+
 	// your logic here
 	fmt.Println("Inside the controller")
 
 	// print players with > 200 stat
 	player := &fantasyv1.PlayerStats{}
 	err := r.Get(context.TODO(), req.NamespacedName, player)
+	// fmt.Println(player.Status.IctIndex)
 
 	if err != nil {
 		fmt.Print(err)
 	}
 
-	if player.Status.IctIndex == "200" {
-		fmt.Println(player.Status.IctIndex)
+	if player.Spec.IctIndex == "200" {
+		team = append(team, player.Spec)
+	}
+
+	// print team
+	for _, t := range team {
+		fmt.Println(t)
 	}
 
 	return ctrl.Result{}, nil
