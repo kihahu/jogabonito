@@ -1,0 +1,6 @@
+apiVersion: fantasy.jogabonito.io/v1
+kind: PlayerStats
+metadata:
+  name: playerstats
+spec:
+  foo: bar

@@ -1,0 +1,7 @@
+domain: jogabonito.io
+repo: k8s.io
+resources:
+- group: fantasy
+  kind: PlayerStats
+  version: v1
+version: "2"
