@@ -73,7 +73,7 @@ func (r *PlayerStatsReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error)
 	}
 
 	for _, x := range playerList.Items {
-		fmt.Println(x.Spec.FirstName)
+		fmt.Println(x.Spec)
 	}
 
 	return ctrl.Result{}, nil

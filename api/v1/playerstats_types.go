@@ -83,7 +83,7 @@ type PlayerStatsStatus struct {
 	// LastName of player 94
 	LastName string `json:"lastname,omitempty"`
 	// 124
-	IctIndex string `json:"ictindex,omitempty"`
+	IctIndex int `json:"ictindex,omitempty"`
 	// 119
 	Bonus string `json:"bonus,omitempty"`
 	// 86
