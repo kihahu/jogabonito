@@ -41,7 +41,7 @@ func (r *PlayerStatsReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error)
 	_ = context.Background()
 	_ = r.Log.WithValues("playerstats", req.NamespacedName)
 
-	team := []fantasyv1.PlayerStatsSpec{}
+	// team := []fantasyv1.PlayerStatsSpec{}
 
 	// your logic here
 	fmt.Println("Inside the controller")
@@ -49,32 +49,32 @@ func (r *PlayerStatsReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error)
 	// print players with > 200 stat
 	playerGet := &fantasyv1.PlayerStats{}
 	err := r.Get(context.TODO(), req.NamespacedName, playerGet)
-	// fmt.Println(player.Status.IctIndex)
+	fmt.Println(playerGet.Spec.FirstName, playerGet.Spec.WebName)
 
 	if err != nil {
 		fmt.Print(err)
 	}
 
-	if playerGet.Spec.IctIndex == "200" {
-		team = append(team, playerGet.Spec)
-	}
+	// if playerGet.Spec.IctIndex >= 200 {
+	// 	team = append(team, playerGet.Spec)
+	// }
 
-	// print team
-	for _, t := range team {
-		fmt.Println(t)
-	}
+	// // print team
+	// for _, t := range team {
+	// 	fmt.Println(t)
+	// }
 
-	// List Players
-	playerList := &fantasyv1.PlayerStatsList{}
-	listErr := r.List(context.TODO(), playerList)
+	// // List Players
+	// playerList := &fantasyv1.PlayerStatsList{}
+	// listErr := r.List(context.TODO(), playerList)
 
-	if listErr != nil {
-		fmt.Println(listErr)
-	}
+	// if listErr != nil {
+	// 	fmt.Println(listErr)
+	// }
 
-	for _, x := range playerList.Items {
-		fmt.Println(x.Spec)
-	}
+	// for _, x := range playerList.Items {
+	// 	fmt.Println(x.Spec)
+	// }
 
 	return ctrl.Result{}, nil
 }

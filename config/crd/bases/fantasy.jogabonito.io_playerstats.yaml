@@ -35,141 +35,168 @@ spec:
           description: PlayerStatsSpec defines the desired state of PlayerStats
           properties:
             assists:
-              description: assits 110
-              type: string
+              type: integer
             bonus:
-              description: "119"
+              type: integer
+            bps:
+              type: integer
+            chance_of_playing_next_round:
+              type: integer
+            chance_of_playing_this_round:
+              type: integer
+            clean_sheets:
+              type: integer
+            code:
+              type: integer
+            cost_change_event:
+              type: integer
+            cost_change_event_fall:
+              type: integer
+            cost_change_start:
+              type: integer
+            cost_change_start_fall:
+              type: integer
+            creativity:
               type: string
-            bpsindex:
-              description: bpsIndex 120
+            dreamteam_count:
+              type: integer
+            element_type:
+              type: integer
+            ep_next:
               type: string
-            cleansheets:
-              description: cleanSheets
+            ep_this:
               type: string
-            cost:
-              description: "91"
-              type: string
-            firstname:
-              description: FirstName of player 85
+            event_points:
+              type: integer
+            first_name:
               type: string
             form:
-              description: "86"
               type: string
-            goalsscored:
-              description: goalsScored 110
+            goals_conceded:
+              type: integer
+            goals_scored:
+              type: integer
+            ict_index:
               type: string
-            ictindex:
-              description: "124"
+            id:
+              type: integer
+            in_dreamteam:
+              type: boolean
+            influence:
               type: string
-            indreamteam:
-              description: inDreamTeam 88
+            minutes:
+              type: integer
+            news:
               type: string
-            lastname:
-              description: LastName of player 94
+            news_added:
               type: string
-            penaltiesmissed:
-              description: penaltiesMissed 114
+            now_cost:
+              type: integer
+            own_goals:
+              type: integer
+            penalties_missed:
+              type: integer
+            penalties_saved:
+              type: integer
+            photo:
               type: string
-            penaltiessaved:
-              description: penaltiesSaved 114
+            points_per_game:
               type: string
-            points:
-              description: points 100
-              type: string
-            pointspergame:
-              description: pointsPerGame 93
-              type: string
-            position:
-              description: position 61
-              type: string
+            red_cards:
+              type: integer
             saves:
-              description: saves 114
+              type: integer
+            second_name:
               type: string
-            selectedbypercent:
-              description: selectByPercent 95
+            selected_by_percent:
+              type: string
+            special:
+              type: boolean
+            squad_number:
               type: string
             status:
-              description: status 97
               type: string
-            transferin:
-              description: "101"
+            team:
+              type: integer
+            team_code:
+              type: integer
+            threat:
               type: string
-            transferout:
-              description: "103"
+            total_points:
+              type: integer
+            transfers_in:
+              type: integer
+            transfers_in_event:
+              type: integer
+            transfers_out:
+              type: integer
+            transfers_out_event:
+              type: integer
+            value_form:
               type: string
-            valueform:
-              description: "105"
+            value_season:
               type: string
+            web_name:
+              type: string
+            yellow_cards:
+              type: integer
+          required:
+          - assists
+          - bonus
+          - bps
+          - chance_of_playing_next_round
+          - chance_of_playing_this_round
+          - clean_sheets
+          - code
+          - cost_change_event
+          - cost_change_event_fall
+          - cost_change_start
+          - cost_change_start_fall
+          - creativity
+          - dreamteam_count
+          - element_type
+          - ep_next
+          - ep_this
+          - event_points
+          - first_name
+          - form
+          - goals_conceded
+          - goals_scored
+          - ict_index
+          - id
+          - in_dreamteam
+          - influence
+          - minutes
+          - news
+          - news_added
+          - now_cost
+          - own_goals
+          - penalties_missed
+          - penalties_saved
+          - photo
+          - points_per_game
+          - red_cards
+          - saves
+          - second_name
+          - selected_by_percent
+          - special
+          - squad_number
+          - status
+          - team
+          - team_code
+          - threat
+          - total_points
+          - transfers_in
+          - transfers_in_event
+          - transfers_out
+          - transfers_out_event
+          - value_form
+          - value_season
+          - web_name
+          - yellow_cards
           type: object
         status:
           description: PlayerStatsStatus defines the observed state of PlayerStats
-          properties:
-            assists:
-              description: assits 110
-              type: string
-            bonus:
-              description: "119"
-              type: string
-            bpsindex:
-              description: bpsIndex 120
-              type: string
-            cleansheets:
-              description: cleanSheets
-              type: string
-            cost:
-              description: "91"
-              type: string
-            firstname:
-              description: FirstName of player 85
-              type: string
-            form:
-              description: "86"
-              type: string
-            goalsscored:
-              description: goalsScored 110
-              type: string
-            ictindex:
-              description: "124"
-              type: string
-            indreamteam:
-              description: inDreamTeam 88
-              type: string
-            lastname:
-              description: LastName of player 94
-              type: string
-            penaltiesmissed:
-              description: penaltiesMissed 114
-              type: string
-            penaltiessaved:
-              description: penaltiesSaved 114
-              type: string
-            points:
-              description: points 100
-              type: string
-            pointspergame:
-              description: pointsPerGame 93
-              type: string
-            position:
-              description: position 61
-              type: string
-            saves:
-              description: saves 114
-              type: string
-            selectedbypercent:
-              description: selectByPercent 95
-              type: string
-            status:
-              description: status 97
-              type: string
-            transferin:
-              description: "101"
-              type: string
-            transferout:
-              description: "103"
-              type: string
-            valueform:
-              description: "105"
-              type: string
           type: object
       type: object
   version: v1
