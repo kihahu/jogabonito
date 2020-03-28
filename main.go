@@ -19,11 +19,11 @@ import (
 	"flag"
 	"os"
 
-	fantasyv1 "k8s.io/api/v1"
+	fantasyv1 "github.com/kihahu/jogabonito/api/v1"
+	"github.com/kihahu/jogabonito/controllers"
 	"k8s.io/apimachinery/pkg/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
-	"k8s.io/controllers"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	// +kubebuilder:scaffold:imports

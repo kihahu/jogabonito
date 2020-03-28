@@ -24,7 +24,7 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	fantasyv1 "k8s.io/api/v1"
+	fantasyv1 "github.com/kihahu/jogabonito/api/v1"
 )
 
 // PlayerStatsReconciler reconciles a PlayerStats object
